@@ -1,0 +1,17 @@
+<p>Componente alumno</p>
+
+
+<h2>Agregar alumnos</h2>
+
+<input type="text" [(ngModel)]="nuevoAlumno.nombre" placeholder="Nombre">
+<input type="text" [(ngModel)]="nuevoAlumno.apellido" placeholder="Apellido">
+<input type="number" [(ngModel)]="nuevoAlumno.nota" placeholder="Apellido">
+<button (click)="addAlumno()">Añadir</button>
+
+
+<h2>Listado alumnos</h2>
+<ul>
+    <li *ngFor="let alumno of _alumnoService.alumnosArray">
+        {{alumno.nombre}} {{ alumno.apellido }}. Nota: {{alumno.nota}}
+    </li>
+</ul>
